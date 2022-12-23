@@ -8,8 +8,10 @@
 
 
   const dispatch = createEventDispatcher();
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     dispatch('importsSubmit', {numberOfImportPos,avgNumPOChanges,avgCostPerHour, systems} )
+    e.target.reset();
+
   } 
 </script>
 
@@ -51,7 +53,7 @@
     </p>
   </div>
 
-  <div class="avg--imports-input">
+  <div class="avg-cost-per-hr-input">
     <div class="flex justify-between">
       <label class="text-white labelz" for="avgCostPerHour">Average cost per hour to perform activities on preparing, issuing and managing
         international POs</label>

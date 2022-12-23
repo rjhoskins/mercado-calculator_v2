@@ -24,9 +24,15 @@ module.exports = {
         darkPink: '#FCB0EE',
         mediumPink: '#FFCFEF',
         lightink: '#FFEEFB',
+        backgroundz: '#F5F5F5'
       },
       fontFamily: {
         'sans': ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        ...defaultTheme.screens,
+        'mercado-max': '1440px'
+
       }
     },
   },
