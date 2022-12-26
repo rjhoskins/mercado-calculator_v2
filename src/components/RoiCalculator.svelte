@@ -44,7 +44,7 @@
   <div class="absolute right-0 -z-10 w-56 h-56 rotate-180 rounded-full bg-[linear-gradient(270deg,_#F5F5F5_50%,_#DFECFE_50%)] -top-28 circle"></div>
   <div class="absolute rounded-full bg-darkBlue w-80 h- h-80 -z-10 -top-40 -left-40 circle"></div>
 <div
-  class="z-10 grid w-full max-w-4xl gap-4 p-2 mx-auto bg-white rounded-md shadow-lg sm:p-4 md:p-6 lg:p-16 place-items-center place-center md:grid-cols-2 ">
+  class="z-10 grid w-full max-w-5xl gap-4 p-2 mx-auto bg-white rounded-md shadow-lg sm:p-4 md:p-6 lg:p-16 place-items-center place-center md:grid-cols-2 ">
   <div class="flex flex-col space-y-6 leading-6 left">
     <h3 class="text-2xl font-bold">Your savings with <br>
       <span class="text-yellowz">Mercado's ROI Calculator</span>.
