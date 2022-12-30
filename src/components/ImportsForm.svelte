@@ -89,5 +89,5 @@
       <!-- Your password must be less than 4 characters. -->
     </p>
   </div>
-  <button type="submit" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+  <button type="submit" class="inline-flex justify-center w-full px-4 py-3 text-sm font-medium text-white border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
 </form>

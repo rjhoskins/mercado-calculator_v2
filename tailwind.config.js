@@ -15,6 +15,7 @@ module.exports = {
         svelte: '#ff3e00',
         darkBlue: '#22303E',
         darkTextGrayish: '#90A4B6',
+        medGrayish: '#E4E9ED',
         b9b9: '#B9B9B9',
         yellowz: '#F2D31B',
         lightBlue: '#ACD0FF',
@@ -22,8 +23,8 @@ module.exports = {
         d9d9: '#D9D9D9',
         dfec: '#DFECFE',
         darkPink: '#FCB0EE',
-        mediumPink: '#FFCFEF',
-        lightink: '#FFEEFB',
+        medPink: '#FFCFEF',
+        lightPink: '#FFEEFB',
         backgroundz: '#F5F5F5'
       },
       fontFamily: {
@@ -31,8 +32,12 @@ module.exports = {
       },
       screens: {
         ...defaultTheme.screens,
-        'mercado-max': '1440px'
+        'mercado-max': '1160px'
 
+      },
+      maxWidth: {
+        ...defaultTheme.maxWidth,
+        'mercado-max': '1160px'
       }
     },
   },

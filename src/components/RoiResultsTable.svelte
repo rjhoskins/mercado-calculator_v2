@@ -13,215 +13,216 @@
 
 
 
-<div class="flex flex-col ">
-  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-      <div class="overflow-hidden">
-        <table class="min-w-full text-center">
-          <thead class="bg-white border-b">
+
+
+<section class="relative w-full">
+  <div class="z-10 max-w-mercado-max gap-4 mx-auto mb-10 border-t border-black border-solid shadow-lg bg-medGrayish lg:rounded-b-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center ">
+  <div class="overflow-x-auto">
+        <table class="w-full text-center">
+          <thead class="border-b text-darkTextGrayish">
             <tr>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium text-gray-900"
+                class="px-6 py-2 text-sm font-medium"
               />
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium text-gray-900"
+                class="px-6 py-2 text-sm font-medium"
               >
                 Pre-Mercado Cost
               </th>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium text-gray-900"
+                class="px-6 py-2 text-sm font-medium"
               >
                 Post-Mercado Cost
               </th>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium text-gray-900"
+                class="px-6 py-2 text-sm font-medium"
               >
                 Annual Saving
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="bg-white">
+          <tbody class="text-black">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Issuance of original PO</td
               >
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {numberOfImportPos ? `${showAsCurrency(50 * numberOfImportPos)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {numberOfImportPos ? `${showAsCurrency(25 * numberOfImportPos)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {numberOfImportPos ? `${showAsCurrency(25 * numberOfImportPos)}`: ''}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >PO changes</td
               >
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {avgNumPOChanges ? `${showAsCurrency(50 * numberOfImportPos * avgNumPOChanges)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {avgNumPOChanges ? `${showAsCurrency(25 * numberOfImportPos * avgNumPOChanges)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
                 {avgNumPOChanges ? `${showAsCurrency(25 * numberOfImportPos * avgNumPOChanges)}`: ''}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Air freight spend</td
               >
               <td
                 colspan="1"
-                class="px-6 py-2 text-sm font-light text-center text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light text-center whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
               {blurString}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Ocean freight spend</td
               >
 
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
 
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Customs clearance fees</td
               >
               <td
                 colspan="1"
-                class="px-6 py-2 text-sm font-light text-center text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light text-center whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Carrying cost</td
               >
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
             </tr>
 
             <!--  -->
-            <tr class="bg-white border-b">
+            <tr class="border-b ">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Sales</td
               >
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
             </tr>
-            <tr class="bg-white">
+            <tr class="">
               <td
-                class="px-6 py-2 text-sm font-medium text-gray-900 whitespace-nowrap"
+                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Annual Savings</td
               >
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light text-gray-900 whitespace-nowrap blur-sm"
+                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
+
   </div>
-</div>
+  </div>
+</section>
