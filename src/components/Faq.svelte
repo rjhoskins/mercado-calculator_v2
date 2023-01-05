@@ -3,10 +3,10 @@
 
     import SaveMore from "./SaveMore.svelte";
 </script>
-<section class="relative w-full text-center">
+<section id="faq" class="relative w-full text-center">
 
-    <div class="z-10 w-full max-w-mercado-max p-2 mx-auto mt-20 space-y-6 leading-7 text-left sm:p-4 md:p-6 lg:p-16 ">
-        <h2 class="text-2xl font-bold text-left" >Frequently <br>
+    <div class="z-10 w-full p-2 mx-auto mt-20 space-y-6 leading-7 text-left max-w-mercado-max sm:p-4 md:p-6 lg:p-16 ">
+        <h2 class="mb-20 text-2xl font-bold text-left" >Frequently <br>
             asked questions.</h2>
 
     <ul class="space-y-6 leading-7 md:space-y-0 faqz md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-16">

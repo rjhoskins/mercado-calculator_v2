@@ -20,7 +20,7 @@
 
 
 </script>
-<form on:submit|preventDefault={handleSubmit}  class="space-y-8 divide-y divide-gray-200">
+<form  on:submit|preventDefault={handleSubmit}  class="space-y-8 divide-y divide-gray-200">
   <div class="space-y-8 divide-y divide-gray-200">
 
 
@@ -71,6 +71,6 @@
 
 
 
-  <button type="submit" class="inline-flex justify-center w-full px-4 py-3 text-sm font-medium text-black border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Next</button>
+  <button type="submit" class="block w-full px-4 py-3 !mb-6 text-sm font-bold text-black border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Next</button>
 
 </form>

@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         svelte: '#ff3e00',
         darkBlue: '#22303E',
+        darkDarkBlue: 'rgba(34, 48, 62, 0.9);',
         darkTextGrayish: '#90A4B6',
         medGrayish: '#E4E9ED',
         b9b9: '#B9B9B9',

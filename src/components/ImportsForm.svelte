@@ -1,10 +1,16 @@
 <script>
   import ExclamationIcon from "./ExclamationIcon.svelte";
+  import ImportsModal from "./ImportsModal.svelte";
   import { createEventDispatcher } from 'svelte'
+  
   export let numberOfImportPos;
   export let avgNumPOChanges;
   export let avgCostPerHour;
   export let systems;
+
+  let showImportsModal
+  let messagesKey;
+
 
 
   const dispatch = createEventDispatcher();
@@ -12,15 +18,29 @@
     dispatch('importsSubmit', {numberOfImportPos,avgNumPOChanges,avgCostPerHour, systems} )
     e.target.reset();
 
+  }
+   
+  const handleModelClose = (e) => showImportsModal = !showImportsModal
+
+  const handleToolTipClick = (e) => {
+    showImportsModal = true
+    messagesKey = e;
+
+    // console.log('handleToolTipClick');
   } 
+  
 </script>
 
-<form on:submit|preventDefault={handleSubmit} >
+<form  on:submit|preventDefault={handleSubmit} >
+  <ImportsModal {showImportsModal} {messagesKey} on:modalClosed={handleModelClose} />
 
   <div class="num-imports-input">
     <div class="flex justify-between">
       <label class="text-white labelz" for="numberOfImportPos">Number of import purchase orders (POs) per year</label>
-      <ExclamationIcon />
+      <!-- <button on:click|preventDefault={handleToolTipClick} > button yo! </button> -->
+      <button on:click|preventDefault={(e) => handleToolTipClick('PO')}>
+        <ExclamationIcon />
+      </button>
     </div>
     <div class="relative ">
       <input type="text" name="numberOfImportPos" id="numberOfImportPos"
@@ -38,7 +58,9 @@
   <div class="avg-num-imports-input">
     <div class="flex justify-between">
       <label class="text-white labelz" for="avgNumPOChanges">Average number of changes per purchase order</label>
-      <ExclamationIcon />
+      <button on:click|preventDefault={(e) => handleToolTipClick('CHANGES')}>
+        <ExclamationIcon />
+      </button>
     </div>
     <div class="relative ">
       <input type="text" name="avgNumPOChanges" id="avgNumPOChanges"
@@ -57,7 +79,9 @@
     <div class="flex justify-between">
       <label class="text-white labelz" for="avgCostPerHour">Average cost per hour to perform activities on preparing, issuing and managing
         international POs</label>
-      <ExclamationIcon />
+        <button on:click|preventDefault={(e) => handleToolTipClick('CPR')}>
+        <ExclamationIcon />
+      </button>
     </div>
     <div class="relative ">
       <input type="text" name="avgCostPerHour" id="avgCostPerHour"
@@ -75,7 +99,9 @@
   <div class="avg--imports-input">
     <div class="flex justify-between">
       <label class="text-white labelz" for="systems">Systems you use to send POs and collaborate with your suppliers</label>
-      <ExclamationIcon />
+      <button on:click|preventDefault={(e) => handleToolTipClick('SYSTEM')}>
+        <ExclamationIcon />
+      </button>
     </div>
     <div class="relative ">
       <input type="text" name="systems" id="systems"
@@ -89,5 +115,5 @@
       <!-- Your password must be less than 4 characters. -->
     </p>
   </div>
-  <button type="submit" class="inline-flex justify-center w-full px-4 py-3 text-sm font-medium text-white border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+  <button type="submit" class="inline-flex justify-center w-full px-5 py-3 my-6 text-sm font-bold text-black border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
 </form>

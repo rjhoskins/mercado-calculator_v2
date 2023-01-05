@@ -9,7 +9,11 @@
   /* * > * {
     border: 1px solid red
   } */
-
+  @layer utilities {
+    .the-special  {
+      clip-path: polygon(50% 0%, 100% 0, 100% calc(100% - 150px), calc(100% - 150px) 100%, 0 100%, 0 0);
+  }
+}
   
 
 </style>

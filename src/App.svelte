@@ -2,7 +2,6 @@
 
 
     import RoiCalculator from './components/RoiCalculator.svelte';
-	import RoiCalculatorPageWrapper from './components/RoiCalculatorPageWrapper.svelte'
 	import Tailwindcss from './components/Tailwindcss.svelte';
 	export let name: string;
 </script>
@@ -15,5 +14,5 @@
 <main class="flex flex-col items-center justify-center min-h-screen mx-auto font align-center">
 	
 
-	<RoiCalculatorPageWrapper />
+	<RoiCalculator />
 </main>

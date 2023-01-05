@@ -1,4 +1,5 @@
 <script>
+
   export let blurString = ''
   export let numberOfImportPos;
   export let avgNumPOChanges;
@@ -16,7 +17,7 @@
 
 
 <section class="relative w-full">
-  <div class="z-10 max-w-mercado-max gap-4 mx-auto mb-10 border-t border-black border-solid shadow-lg bg-medGrayish lg:rounded-b-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center ">
+  <div class="z-10 gap-4 mx-auto mb-10 border-t border-black border-solid shadow-lg max-w-mercado-max bg-medGrayish lg:rounded-b-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center ">
   <div class="overflow-x-auto">
         <table class="w-full text-center">
           <thead class="border-b text-darkTextGrayish">

@@ -1,7 +1,24 @@
+# Remaining Tasks
+
+- [x] finish results
+  - [] number cicle 10min
+  - [] number cicle 10min
+  
+- [x] create modal
+- [x] add rounded corners to outside of form based on progress
+- [x] fix funky tab width for certain screen sizes.  
+- [] wire things up
+- [] add api call
+- [] create HubSpot custom form
+- [x] add transitions
+- [x] tighten up spacing & such on mobile
+- [x] confetti!
+
 > Default dev port is now `8080`
+
 # Svelte + TS + Tailwind 3.0 app
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/colinbate/svelte-ts-tailwind-template and is based on the official Svelte template with TypeScript pre-enabled and Tailwind CSS configured. Uses Tailwind CSS 3.0, which now uses
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at <https://github.com/colinbate/svelte-ts-tailwind-template> and is based on the official Svelte template with TypeScript pre-enabled and Tailwind CSS configured. Uses Tailwind CSS 3.0, which now uses
 the JIT compiler by default.
 
 > Note that this isn't a SvelteKit app, this is a vanilla Svelte template with the above mentioned technologies pre-installed.
@@ -38,7 +55,6 @@ Navigate to [localhost:8080](http://localhost:8080). You should see your app run
 
 By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
 
-
 ## Building and running in production mode
 
 To create an optimised version of the app:
@@ -48,7 +64,6 @@ npm run build
 ```
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
-
 
 ## Single-page app mode
 
@@ -63,4 +78,3 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 ## Using TypeScript
 
 TypeScript has already been enabled in this template.
-
