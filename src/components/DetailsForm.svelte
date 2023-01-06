@@ -1,5 +1,5 @@
 <script>
-  import { DetailsFormDataStore } from "../store";
+  import { DetailsFormDataStore, DetailsCompletedStore } from "../store";
   import { get } from 'svelte/store';
   import IndustrySelect from "./IndustrySelect.svelte";
   import {createEventDispatcher } from 'svelte'
@@ -19,10 +19,12 @@
   // }
   $:{
     console.log($DetailsFormDataStore);
+    console.log($DetailsCompletedStore);
   }
 
   const handleSubmit = (e) => {
     DetailsFormDataStore.update(curr => curr = { industry, firstName, lastName,  phone,  compnanyName,  companyEmailAddress })
+    DetailsCompletedStore.update(curr => curr = true)
     dispatch('detailsSubmit', { industry, firstName, lastName,  phone,  compnanyName,  companyEmailAddress, })
     // e.target.reset();
     const value = get(DetailsFormDataStore);

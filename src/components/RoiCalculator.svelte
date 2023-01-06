@@ -1,4 +1,5 @@
 <script>
+  import { DetailsCompletedStore } from '../store';
   import { scale } from 'svelte/transition';
   import AddValue from './AddValue.svelte'
   import DummyHeader from './DummyHeader.svelte'
@@ -15,13 +16,12 @@
   import Tabs from './Tabs.svelte';
   import FullSavings from './FullSavings.svelte';
 
-  let detailsCompleted = false;
   let blurString;
   let numberOfImportPos;
   let avgNumPOChanges;
   let detailsData;
   let formSubmitted = false;
-  let showImportsModal;
+
 
   const handleImportsSubmit = (e) => {
     // console.log(e.detail);
@@ -31,9 +31,7 @@
     formSubmitted = true;
   };
 
-  const handleDetailsSubmit = (e) => {
-    detailsCompleted = true;
-  };
+
 </script>
 
 <DummyHeader />
@@ -96,14 +94,14 @@
       </div>
     </div>
     <div class="w-full mx-auto mt-8 form-stuffz right">
-      <Tabs {showImportsModal} {detailsCompleted} />
-      <div class="relative p-3 overflow-auto md:max-w-lg formz grid-rows-auto left bg-darkBlue rounded-b-2xl {detailsCompleted
+      <Tabs />
+      <div class="relative p-3 overflow-auto md:max-w-lg formz grid-rows-auto left bg-darkBlue rounded-b-2xl {$DetailsCompletedStore
           ? ' rounded-tl-2xl '
           : ' rounded-tr-2xl '}">
-        {#if detailsCompleted}
-          <ImportsForm on:importsModalToggle on:importsSubmit={handleImportsSubmit} />
+        {#if $DetailsCompletedStore }
+          <ImportsForm />
         {:else}
-          <DetailsForm  on:detailsSubmit={handleDetailsSubmit} />
+          <DetailsForm  />
         {/if}
       </div>
     </div>
