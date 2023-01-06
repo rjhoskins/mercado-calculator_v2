@@ -1,4 +1,5 @@
 <script>
+    import { ShowModalStore } from '../store';
     // your script goes here
     import { fade } from 'svelte/transition';
     import {createEventDispatcher } from 'svelte'
@@ -13,7 +14,7 @@
 
 </script>
 
-{#if showImportsModal}
+{#if $ShowModalStore }
      <!-- content here -->
      
      <section transition:fade on:click|self={handleClick} class="absolute z-30 w-full h-full -translate-x-1/2 -translate-y-1/2 rounded-2xl backdropz bg-black/30 left-1/2 top-1/2">

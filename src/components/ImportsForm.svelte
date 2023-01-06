@@ -1,12 +1,13 @@
 <script>
+  import { ShowModalStore } from "../store";
   import ExclamationIcon from "./ExclamationIcon.svelte";
   import ImportsModal from "./ImportsModal.svelte";
   import { createEventDispatcher } from 'svelte'
   
-  export let numberOfImportPos;
-  export let avgNumPOChanges;
-  export let avgCostPerHour;
-  export let systems;
+  let numberOfImportPos;
+  let avgNumPOChanges;
+  let avgCostPerHour;
+  let systems;
 
   let showImportsModal
   let messagesKey;
@@ -20,10 +21,10 @@
 
   }
    
-  const handleModelClose = (e) => showImportsModal = !showImportsModal
+  const handleModelClose = (e) => ShowModalStore.update(curr => false)
 
   const handleToolTipClick = (e) => {
-    showImportsModal = true
+    ShowModalStore.update(curr => true)
     messagesKey = e;
 
     // console.log('handleToolTipClick');

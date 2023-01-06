@@ -1,4 +1,6 @@
 <script>
+  import { DetailsFormDataStore } from "../store";
+  import { get } from 'svelte/store';
   import IndustrySelect from "./IndustrySelect.svelte";
   import {createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher();
@@ -9,10 +11,22 @@
   let compnanyName 
   let companyEmailAddress 
   
+  // const handleSubmit = (e) => {
+  //   console.log('detailz',e.detail);
+  //   // DetailsFormDataStore.update(curr => {...e.detail})
+  //   console.log($DetailsFormDataStore);
+  //   e.target.reset();
+  // }
+  $:{
+    console.log($DetailsFormDataStore);
+  }
 
   const handleSubmit = (e) => {
+    DetailsFormDataStore.update(curr => curr = { industry, firstName, lastName,  phone,  compnanyName,  companyEmailAddress })
     dispatch('detailsSubmit', { industry, firstName, lastName,  phone,  compnanyName,  companyEmailAddress, })
-    e.target.reset();
+    // e.target.reset();
+    const value = get(DetailsFormDataStore);
+    console.log('storz data',value);
   }
   
   const handleIndustryChange = (e) => industry = e.detail;

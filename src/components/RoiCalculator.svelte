@@ -24,7 +24,7 @@
   let showImportsModal;
 
   const handleImportsSubmit = (e) => {
-    console.log(e.detail);
+    // console.log(e.detail);
     numberOfImportPos = e.detail.numberOfImportPos;
     avgNumPOChanges = e.detail.avgNumPOChanges;
     blurString = '$375,000';
@@ -32,13 +32,8 @@
   };
 
   const handleDetailsSubmit = (e) => {
-    console.log(e.detail);
     detailsCompleted = true;
   };
-  const handleShowImportsModalToggle = (e) => {
-    console.log('hiz');
-    showImportsModal = !showImportsModal
-    }
 </script>
 
 <DummyHeader />
@@ -106,9 +101,9 @@
           ? ' rounded-tl-2xl '
           : ' rounded-tr-2xl '}">
         {#if detailsCompleted}
-          <ImportsForm {showImportsModal} on:importsModalToggle on:importsSubmit={handleImportsSubmit} />
+          <ImportsForm on:importsModalToggle on:importsSubmit={handleImportsSubmit} />
         {:else}
-          <DetailsForm on:showImportsModal={handleShowImportsModalToggle} on:detailsSubmit={handleDetailsSubmit} />
+          <DetailsForm  on:detailsSubmit={handleDetailsSubmit} />
         {/if}
       </div>
     </div>
