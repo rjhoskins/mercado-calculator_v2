@@ -1,21 +1,22 @@
 <script>
-
-	import Confetti from './Confetti.svelte';
-  export let name = 'Simonz'
-  export let roiResult = '$225,000'
+		import { blurString, resultsFirstName, resultsTotalSavings  } from './../store.js';   
+    import Confetti from './Confetti.svelte';   
+    import Button from './Button.svelte';
+    import NemberedCircleIcon from './NemberedCircle Icon.svelte';
   import { text } from 'svelte/internal';
-  import Button from './Button.svelte';
-  import NemberedCircleIcon from './NemberedCircle Icon.svelte';
+
+    // $: {console.table(blurString, $resultsFirstName, $resultsTotalSavings );}
+
 </script>
 
-<section class="relative w-full text-center ">
+<section class="relative w-full mt-8 text-center ">
 
   <div class="z-10 w-full gap-4 p-4 mx-auto space-y-6 leading-7 bg-white shadow-lg max-w-mercado-max lg:rounded-t-2xl sm:p-4 md:p-6 lg:p-16 place-items-center place-center">
    <Confetti />
-    <h2 class="max-w-xl mx-auto mt-6 text-2xl font-bold md:text-3xl text-yellowz" >Realize {roiResult}+ in potential savings just from your international purchasing processes, {name}!</h2>
+    <h2 class="max-w-xl mx-auto mt-6 text-2xl font-bold md:text-3xl text-yellowz" >Realize {$resultsTotalSavings}+ in potential savings just from your international purchasing processes, {$resultsFirstName}!</h2>
     <p class="max-w-xl mx-auto">Mercado also offers further savings across your air and ocean freight spend, customs clearance fees, carrying costs, and increased availability of goods for sales</p>
       <p class="font-bold">Book a session with the Mercado team to find out more.</p>
-<Button link='/roi-demo' text='BOOK YOUR ROI DEMO'  />
+<Button link='/roi-demo' textBlack="true" text='BOOK YOUR ROI DEMO'  />
         <p class="font-bold">To calculate this ROI snapshot, we have focused on two value levers:</p>
         <div class="grid-cols-8 leading-7 text-left md:grid">
           <ul class="flex-col col-span-3 mb-6 space-y-6 md:flex md:mb-0 justify-evenly ">

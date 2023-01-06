@@ -1,6 +1,7 @@
 <script>
   import { bind } from 'svelte/internal';
   import { createEventDispatcher } from 'svelte';
+  import IndustryOptions from './IndustryOptions.svelte';
   const dispatch = createEventDispatcher();
   export let industry;
   const handleChange = (e) => dispatch('industryChange', industry);
@@ -19,9 +20,7 @@
     name="location"
     class="w-full px-6 pl-0 mt-1 bg-transparent border-transparent mt-1block border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
   >
-    <option selected>Select an industry</option>
-    <option>United States</option>
-    <option>Canada</option>
-    <option>Mexico</option>
+    <option disabled selected>Select an industry</option>
+<IndustryOptions />
   </select>
 </div>

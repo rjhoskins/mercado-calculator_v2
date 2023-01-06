@@ -1,4 +1,5 @@
 <script>
+	import { ImportsFormDataStore, AllFormsSumittedStore } from './../store.js';
   import { ShowModalStore } from "../store";
   import ExclamationIcon from "./ExclamationIcon.svelte";
   import ImportsModal from "./ImportsModal.svelte";
@@ -12,13 +13,14 @@
   let showImportsModal
   let messagesKey;
 
+  $:{
+    console.log($ImportsFormDataStore);
+    console.log($AllFormsSumittedStore);
+  }
 
-
-  const dispatch = createEventDispatcher();
   const handleSubmit = (e) => {
-    dispatch('importsSubmit', {numberOfImportPos,avgNumPOChanges,avgCostPerHour, systems} )
-    e.target.reset();
-
+    ImportsFormDataStore.update(curr => curr = {numberOfImportPos,avgNumPOChanges,avgCostPerHour, systems})
+    AllFormsSumittedStore.update(curr => curr = true)
   }
    
   const handleModelClose = (e) => ShowModalStore.update(curr => false)
@@ -116,5 +118,5 @@
       <!-- Your password must be less than 4 characters. -->
     </p>
   </div>
-  <button type="submit" class="inline-flex justify-center w-full px-5 py-3 my-6 text-sm font-bold text-black border border-transparent rounded-full shadow-sm bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+  <button type="submit" class="block w-full px-4 py-3 !my-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  ">Submit</button>
 </form>

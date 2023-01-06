@@ -1,10 +1,6 @@
 <script>
     import { fade } from 'svelte/transition';
     import { DetailsCompletedStore, ShowModalStore } from '../store';
-    export let detailsCompleted
-    export let showImportsModal;
-
-
 
     const baseTabClass = 'font-bold text-lg w-full text-darkTextGrayish py-3 cursor-auto'
     const inactiveTabClass = ' bg-white text-darkTextGrayish '

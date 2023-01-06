@@ -1,5 +1,5 @@
 <script>
-  import { DetailsCompletedStore } from '../store';
+  import { DetailsCompletedStore, AllFormsSumittedStore } from '../store';
   import { scale } from 'svelte/transition';
   import AddValue from './AddValue.svelte'
   import DummyHeader from './DummyHeader.svelte'
@@ -19,23 +19,16 @@
   let blurString;
   let numberOfImportPos;
   let avgNumPOChanges;
-  let detailsData;
-  let formSubmitted = false;
 
 
-  const handleImportsSubmit = (e) => {
-    // console.log(e.detail);
-    numberOfImportPos = e.detail.numberOfImportPos;
-    avgNumPOChanges = e.detail.avgNumPOChanges;
-    blurString = '$375,000';
-    formSubmitted = true;
-  };
+
+
 
 
 </script>
 
 <DummyHeader />
-{#if !formSubmitted}
+{#if !$AllFormsSumittedStore}
 
 <AddValue />
 
@@ -114,11 +107,11 @@
 <Faq />
 
 {/if}
-{#if formSubmitted}
+{#if $AllFormsSumittedStore}
 
 <div  transition:scale  class="">
   <ResultsValue />
-    <RoiResultsTable {blurString} {numberOfImportPos} {avgNumPOChanges} />
+    <RoiResultsTable />
 </div>
 {/if}
 

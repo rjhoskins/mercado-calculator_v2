@@ -1,9 +1,7 @@
 <script>
+	import { blurString, resultsFirstName, numberOfImportPos, avgNumPOChanges   } from './../store.js';
 
-  export let blurString = ''
-  export let numberOfImportPos;
-  export let avgNumPOChanges;
-
+  $: {console.table(blurString,$resultsFirstName, $numberOfImportPos, $avgNumPOChanges );}
 
   const showAsCurrency = (string) => {
     return ` $${new Intl.NumberFormat('en-US', {}).format(string)}`
@@ -17,7 +15,7 @@
 
 
 <section class="relative w-full">
-  <div class="z-10 gap-4 mx-auto mb-10 border-t border-black border-solid shadow-lg max-w-mercado-max bg-medGrayish lg:rounded-b-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center ">
+  <div class="z-10 gap-4 mx-auto mb-8 border-t border-black border-solid shadow-lg max-w-mercado-max bg-medGrayish lg:rounded-b-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center ">
   <div class="overflow-x-auto">
         <table class="w-full text-center">
           <thead class="border-b text-darkTextGrayish">
@@ -55,17 +53,17 @@
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {numberOfImportPos ? `${showAsCurrency(50 * numberOfImportPos)}`: ''}
+                {$numberOfImportPos ? `${showAsCurrency(50 * $numberOfImportPos)}`: ''}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {numberOfImportPos ? `${showAsCurrency(25 * numberOfImportPos)}`: ''}
+                {$numberOfImportPos ? `${showAsCurrency(25 * $numberOfImportPos)}`: ''}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {numberOfImportPos ? `${showAsCurrency(25 * numberOfImportPos)}`: ''}
+                {$numberOfImportPos ? `${showAsCurrency(25 * $numberOfImportPos)}`: ''}
               </td>
             </tr>
             <tr class="">
@@ -76,17 +74,17 @@
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {avgNumPOChanges ? `${showAsCurrency(50 * numberOfImportPos * avgNumPOChanges)}`: ''}
+                {$avgNumPOChanges ? `${showAsCurrency(50 * $numberOfImportPos * $avgNumPOChanges)}`: ''}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {avgNumPOChanges ? `${showAsCurrency(25 * numberOfImportPos * avgNumPOChanges)}`: ''}
+                {$avgNumPOChanges ? `${showAsCurrency(25 * $numberOfImportPos * $avgNumPOChanges)}`: ''}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap"
               >
-                {avgNumPOChanges ? `${showAsCurrency(25 * numberOfImportPos * avgNumPOChanges)}`: ''}
+                {$avgNumPOChanges ? `${showAsCurrency(25 * $numberOfImportPos * $avgNumPOChanges)}`: ''}
               </td>
             </tr>
             <tr class="">
