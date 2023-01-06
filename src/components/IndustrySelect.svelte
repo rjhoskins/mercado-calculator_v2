@@ -9,7 +9,7 @@
 <div class="sm:col-span-3">
   <label
     for="location"
-    class="block text-sm font-medium text-white text-darkTextGrayish"
+    class="block text-sm font-medium text-white"
     >Industry</label
   >
   <select
@@ -17,7 +17,7 @@
     on:change={handleChange}
     id="location"
     name="location"
-    class="block w-full px-6 py-2 pl-3 pr-10 mt-1 text-base bg-transparent border-b-2 border-transparent border-b-darkTextGrayish text-darkTextGrayish focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+    class="w-full px-6 pl-0 mt-1 bg-transparent border-transparent mt-1block border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
   >
     <option selected>Select an industry</option>
     <option>United States</option>

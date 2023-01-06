@@ -10,7 +10,7 @@
 
 <section class="relative w-full text-center ">
 
-  <div class="z-10 w-full gap-4 p-2 mx-auto space-y-6 leading-7 bg-white shadow-lg max-w-mercado-max lg:rounded-t-md sm:p-4 md:p-6 lg:p-16 place-items-center place-center">
+  <div class="z-10 w-full gap-4 p-4 mx-auto space-y-6 leading-7 bg-white shadow-lg max-w-mercado-max lg:rounded-t-2xl sm:p-4 md:p-6 lg:p-16 place-items-center place-center">
    <Confetti />
     <h2 class="max-w-xl mx-auto mt-6 text-2xl font-bold md:text-3xl text-yellowz" >Realize {roiResult}+ in potential savings just from your international purchasing processes, {name}!</h2>
     <p class="max-w-xl mx-auto">Mercado also offers further savings across your air and ocean freight spend, customs clearance fees, carrying costs, and increased availability of goods for sales</p>
@@ -32,7 +32,7 @@
             <p>By digitizing the international Purchase Order, Mercado can provide a time-based saving of up to 50% through improved operating efficiencies and automated work flows to collaborate with your suppliers.</p>
             <p>
               <span class="font-bold">Want to save more?</span> <br>
-              <a class="underline" href="/roi-demo">Click here</a> to book an ROI demo.
+              <a class="underline text-medBlue hover:text-black" href="/roi-demo">Click here</a> to book an ROI demo.
             </p>
           </div>
         </div>

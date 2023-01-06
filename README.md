@@ -1,15 +1,21 @@
 # Remaining Tasks
 
 - [x] finish results
-  - [] number cicle 10min
-  - [] number cicle 10min
-  
 - [x] create modal
 - [x] add rounded corners to outside of form based on progress
-- [x] fix funky tab width for certain screen sizes.  
+- [x] fix funky tab width for certain screen sizes.
+- [] implement data store
 - [] wire things up
+- [] wire things up
+- [] add data store
 - [] add api call
 - [] create HubSpot custom form
+- [] deploy to WP
+- [] final touches
+- [] hover transitions
+- [] modal text
+- [] modal overlay not on inactive tab
+- [] get & add industry elements
 - [x] add transitions
 - [x] tighten up spacing & such on mobile
 - [x] confetti!

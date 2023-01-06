@@ -3,4 +3,7 @@
     export let link;
 </script>
 
-<a href={link} class="block px-5 py-3 mx-auto !mb-6 text-sm font-bold text-black border border-transparent rounded-full shadow-sm w-fit lg:justify-self-start bg-yellowz hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 h-fit">{text}</a>
+<a href={link} 
+class="block w-fit mx-auto !my-6 px-4 py-3 !mt-8 !mb-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  "
+
+>{text}</a>

@@ -5,7 +5,7 @@
 </script>
 <section id="faq" class="relative w-full text-center">
 
-    <div class="z-10 w-full p-2 mx-auto mt-20 space-y-6 leading-7 text-left max-w-mercado-max sm:p-4 md:p-6 lg:p-16 ">
+    <div class="z-10 w-full p-4 mx-auto mt-20 space-y-6 leading-7 text-left max-w-mercado-max sm:p-4 md:p-6 lg:p-16 ">
         <h2 class="mb-20 text-2xl font-bold text-left" >Frequently <br>
             asked questions.</h2>
 
