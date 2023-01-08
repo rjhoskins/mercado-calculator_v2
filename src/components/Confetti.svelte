@@ -3,20 +3,7 @@
     let played  = false;
     setTimeout(() => played = true, 3500)
   
-    // let controlsLayout = [
-    //   'previousFrame',
-    //   'playpause',
-    //   'stop',
-    //   'nextFrame',
-    //   'progress',
-    //   'frame',
-    //   'loop',
-    //   'spacer',
-    //   'background',
-    //   'snapshot',
-    //   'zoom',
-    //   'info',
-    // ];
+    let controlsLayout
   </script>
   {#if !played}
      <!-- content here -->
@@ -26,6 +13,10 @@
          autoplay="{true}"
          height="{600}"
          width="{600}"
+         controls="{false}"
+  background="transparent"
+  controlsLayout={controlsLayout}
+
        />
      </div>
   {/if}

@@ -5,7 +5,7 @@
 
 </script>
 
-<section class="relative w-full px-1 text-center">
+<section class="relative w-full px-1 mb-8 text-center">
 
     <div class="relative z-10 grid w-full max-w-mercado-max gap-4 p-4 mx-auto min-h-[312px] rounded-2xl sm:p-4 md:p-x-6 lg:p-12  md:grid-cols-2 space-y-6 leading-7 mt-6 md:!rounded-br-[150px] bg-darkBlue ">
         <div class="absolute w-[300px] h-[300px] bottom-0 right-0 hidden circles md:block">

@@ -1,7 +1,7 @@
 <script>
 	import { blurString, resultsFirstName, numberOfImportPos, avgNumPOChanges   } from './../store.js';
 
-  $: {console.table(blurString,$resultsFirstName, $numberOfImportPos, $avgNumPOChanges );}
+  // $: {console.table(blurString,$resultsFirstName, $numberOfImportPos, $avgNumPOChanges );}
 
   const showAsCurrency = (string) => {
     return ` $${new Intl.NumberFormat('en-US', {}).format(string)}`
@@ -22,46 +22,46 @@
             <tr>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium"
+                class="px-6 py-6 text-sm font-medium"
               />
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium"
+                class="px-6 py-6 text-sm font-medium"
               >
                 Pre-Mercado Cost
               </th>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium"
+                class="px-6 py-6 text-sm font-medium"
               >
                 Post-Mercado Cost
               </th>
               <th
                 scope="col"
-                class="px-6 py-2 text-sm font-medium"
+                class="px-6 py-6 text-sm font-medium"
               >
                 Annual Saving
               </th>
             </tr>
           </thead>
           <tbody class="text-black">
-            <tr class="">
+            <tr class="border border-t border-t-b9b9">
               <td
-                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
+                class="px-6 py-2 pt-4 text-sm font-medium whitespace-nowrap"
                 >Issuance of original PO</td
               >
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap"
               >
                 {$numberOfImportPos ? `${showAsCurrency(50 * $numberOfImportPos)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap"
               >
                 {$numberOfImportPos ? `${showAsCurrency(25 * $numberOfImportPos)}`: ''}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap"
               >
                 {$numberOfImportPos ? `${showAsCurrency(25 * $numberOfImportPos)}`: ''}
               </td>
@@ -177,7 +177,7 @@
             </tr>
 
             <!--  -->
-            <tr class="border-b ">
+            <tr >
               <td
                 class="px-6 py-2 text-sm font-medium whitespace-nowrap"
                 >Sales</td
@@ -198,23 +198,23 @@
                 {blurString}
               </td>
             </tr>
-            <tr class="">
+            <tr class="border border-b border-b-b9b9">
               <td
-                class="px-6 py-2 text-sm font-medium whitespace-nowrap"
+                class="px-6 py-2 pb-4 text-sm font-medium whitespace-nowrap"
                 >Annual Savings</td
               >
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>
               <td
-                class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {blurString}
               </td>

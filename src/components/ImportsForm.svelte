@@ -13,10 +13,10 @@
   let showImportsModal
   let messagesKey;
 
-  $:{
-    console.log($ImportsFormDataStore);
-    console.log($AllFormsSumittedStore);
-  }
+  // $:{
+  //   console.log($ImportsFormDataStore);
+  //   console.log($AllFormsSumittedStore);
+  // }
 
   const handleSubmit = (e) => {
     ImportsFormDataStore.update(curr => curr = {numberOfImportPos,avgNumPOChanges,avgCostPerHour, systems})

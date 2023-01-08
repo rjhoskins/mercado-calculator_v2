@@ -4,18 +4,17 @@
 - [x] create modal
 - [x] add rounded corners to outside of form based on progress
 - [x] fix funky tab width for certain screen sizes.
-- [] implement data store
-- [] wire things up
-- [] wire things up
-- [] add data store
-- [] add api call
-- [] create HubSpot custom form
+- [x] implement data store
+- [x] wire things up
+- [] add data validation
+- [] add api call (<https://legacydocs.hubspot.com/docs/methods/contacts/create_or_update> && <https://developers.hubspot.com/changelog/upcoming-api-key-sunset>)
+- [x] create HubSpot contact properties (if not exist)
 - [] deploy to WP
-- [] final touches
-- [] hover transitions
-- [] modal text
-- [] modal overlay not on inactive tab
-- [] get & add industry elements
+- [x] final touches
+- [x] hover transitions
+- [x] modal text
+- [x] modal overlay not on inactive tab
+- [x] get & add industry elements
 - [x] add transitions
 - [x] tighten up spacing & such on mobile
 - [x] confetti!

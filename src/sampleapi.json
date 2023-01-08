@@ -1,0 +1,77 @@
+{
+  "email": "HubSpot@test.com",
+  "properties": [
+    {
+      "property": "firstname",
+      "value": "HubSpot"
+    },
+    {
+      "property": "lastname",
+      "value": "Test"
+    },
+    {
+      "property": "email",
+      "value": "HubSpot@test.com"
+    },
+    {
+      "property": "company",
+      "value": "HubSpot"
+    },
+    {
+      "property": "phone",
+      "value": "8675309"
+    },
+    {
+      "property": "address",
+      "value": "25 First Street"
+    },
+    {
+      "property": "city",
+      "value": "Cambridge"
+    },
+    {
+      "property": "state",
+      "value": "Massachusetts"
+    },
+    {
+      "property": "zip",
+      "value": "02139"
+    },
+    {
+      "property": "mxp_vertical_industry",
+      "value": "Accounting"
+    },
+    {
+      "property": "import_entries_per_year",
+      "value": "1500"
+    },
+    {
+      "property": "avg_num_po_changes",
+      "value": "5"
+    },
+    {
+      "property": "avg_cost_per_hour",
+      "value": "50"
+    },
+    {
+      "property": "current_system",
+      "value": "sheets"
+    },
+    {
+      "property": "source",
+      "value": "ROI Calculator"
+    },
+    {
+      "property": "lifecyclestage",
+      "value": "salesqualifiedlead"
+    },
+    {
+      "property": "hs_lead_status",
+      "value": "NEW"
+    },
+    {
+      "property": "type",
+      "value": "Prospects"
+    }
+  ]
+}

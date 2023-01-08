@@ -1,4 +1,5 @@
 <script>
+  import { validateDetails } from '../schema';
   import {
     DetailsFormDataStore,
     DetailsCompletedStore,
@@ -12,13 +13,13 @@
   let firstName;
   let lastName;
   let phone;
-  let compnanyName;
+  let companyName;
   let companyEmailAddress;
 
   $: {
-    // console.log($DetailsFormDataStore);
-    // console.log($DetailsCompletedStore);
-    // console.log($AllFormsSumittedStore);
+    console.log($DetailsFormDataStore);
+    console.log($DetailsCompletedStore);
+    console.log($AllFormsSumittedStore);
   }
 
   const handleSubmit = (e) => {
@@ -29,7 +30,7 @@
           firstName,
           lastName,
           phone,
-          compnanyName,
+          companyName,
           companyEmailAddress,
         })
     );
@@ -96,17 +97,17 @@
       <IndustrySelect on:industryChange={handleIndustryChange} />
 
       <div class="col-span-6">
-        <label for="compnanyName" class="block text-sm font-medium text-white"
+        <label for="companyName" class="block text-sm font-medium text-white"
           >Company name</label
         >
         <div class="mt-1">
           <input
             type="text"
-            bind:value={compnanyName}
+            bind:value={companyName}
             placeholder="ABC Suppliers"
-            name="compnanyName"
-            id="compnanyName"
-            autocomplete="compnanyName"
+            name="companyName"
+            id="companyName"
+            autocomplete="companyName"
             class="block w-full px-6 pl-0 text-sm bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz"
           />
         </div>

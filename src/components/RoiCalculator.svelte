@@ -4,7 +4,6 @@
   import AddValue from './AddValue.svelte'
   import DummyHeader from './DummyHeader.svelte'
   import DummyFooter from './DummyFooter.svelte'
-  import RoiCalculator from './RoiCalculator.svelte';
   import RoiResultsCalculator from './RoiResultsTable.svelte';
   import CircleCheckIcon from './CircleCheckIcon.svelte';
   import DetailsForm from './DetailsForm.svelte';
@@ -112,6 +111,7 @@
 <div  transition:scale  class="">
   <ResultsValue />
     <RoiResultsTable />
+    <FullSavings />
 </div>
 {/if}
 

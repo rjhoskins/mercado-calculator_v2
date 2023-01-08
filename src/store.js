@@ -8,7 +8,7 @@ export const DetailsFormDataStore = writable({
    firstName: '',
    lastName: '',
    phone: '',
-   compnanyName: '',
+   companyName: '',
    companyEmailAddress: '',
 });
 
@@ -20,6 +20,7 @@ export const ImportsFormDataStore = writable({
 });
 
 export const blurString = '$375,000';
+export const randomDigitMoneyString = (length) => ` $${new Intl.NumberFormat('en-US', {}).format(string)}`
 
 export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstName.trim());
 export const numberOfImportPos = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.numberOfImportPos);
