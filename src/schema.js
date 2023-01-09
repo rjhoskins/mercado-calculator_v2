@@ -13,7 +13,7 @@ const detailsSchema = z.object({
 const importsSchema = z.object({
    import_entries_per_year: z.number().int({ message: 'must be a whole number' }).positive({ message: 'must be a number greater than zero' }),
    avg_num_po_changes: z.number().int({ message: 'must be a whole number' }).positive({ message: 'must be a number greater than zero' }),
-   avg_cost_per_hour: z.string().min(2, { message: "Must be 2 or more characters long" }),
+   avg_cost_per_hour: z.number().int({ message: 'must be a whole number' }).positive({ message: 'must be a number greater than zero' }),
    current_system: z.string().min(2, { message: "Must be 2 or more characters long" })
 
 })

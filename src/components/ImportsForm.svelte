@@ -22,9 +22,11 @@
     formErrors = []
     const formData = {import_entries_per_year,avg_num_po_changes,avg_cost_per_hour, current_system}
     const results = validateImports(formData)
+    console.log('formData', formData);
     if (results.valid) {
       window.scrollTo(0, 0) 
-    AllFormsSumittedStore.update(curr => curr = true)
+      ImportsFormDataStore.update(curr => curr = formData)
+      AllFormsSumittedStore.update(curr => curr = true)
     sendHubSpotData()
     }
     if (!results.valid) {
@@ -32,7 +34,6 @@
       console.log('not valid', formErrors);
     }
 
-    ImportsFormDataStore.update(curr => curr = formData)
   }
    
   const handleModelClose = (e) => ShowModalStore.update(curr => false)
@@ -100,8 +101,8 @@
           </div>
       </div>
       <div class="relative ">
-        <input type="text" name="avg_cost_per_hour" id="avg_cost_per_hour"
-          class="w-full bg-transparent border-transparent inputz placeholder-darkTextGrayish text-darkTextGrayish sm:text-sm"
+        <input type="number" name="avg_cost_per_hour" id="avg_cost_per_hour"
+          class="w-full bg-transparent border-transparent no-spinner inputz placeholder-darkTextGrayish text-darkTextGrayish sm:text-sm"
           aria-invalid="true" placeholder="Example: 50" bind:value={avg_cost_per_hour} />
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <!-- TODO:? Heroicon name: mini/exclamation-circle -->

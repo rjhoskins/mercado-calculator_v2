@@ -1,4 +1,4 @@
-<section class="relative w-full p-1 py-20 space-y-6 leading-7 text-center">
+<section class="relative w-full px-4 py-20 space-y-6 leading-7 text-center">
 
     <div class="absolute right-0 w-[200px] h-[200px] rotate-180 rounded-[0_0_200px_0]  -z-10 bg-lightBlue bottom-0 circle"></div>
   <h2 class="max-w-xl mx-auto text-3xl font-bold md:text-4xl " >Add value back into your import supply chain with Mercado.</h2>

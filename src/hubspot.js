@@ -14,28 +14,28 @@ async function sendHubSpotData(isTest) {
   const importsData = get(ImportsFormDataStore)
   const bigBoi = { ...detailsData, ...importsData, ...hiddenData }
   // console.log('big boi', { ...detailsData, ...importsData, ...hiddenData })
-
   const data = await generateHubSpotAPIData(bigBoi)
   console.log('data being "sent" to API...😉', data);
 
 
-  // let email = data[2].value;
-  // fetch('https://mercadolabs.com/wp-json/hubspot/v1/contacts', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     "email": email,
-  //     "properties": data
-  //   }
-  //   )
-  // })
-  //   .then(res => res.json())
-  //   .catch(err => console.log(err))
+  let email = detailsData.email
+  console.log('email...', email);
+  console.log('bigBoi...', bigBoi);
+  fetch('https://mercadolabs.com/wp-json/hubspot/v1/contacts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      "email": detailsData.email,
+      "properties": await generateHubSpotAPIData(bigBoi)
+    }
+    )
+  })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err))
 
-
-  // return false;
 
 }
 
