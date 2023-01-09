@@ -1,4 +1,4 @@
-import { writable, derived } from 'svelte/store';
+import { writable, derived, get } from 'svelte/store';
 
 export const ShowModalStore = writable(false);
 export const DetailsCompletedStore = writable(false);
@@ -18,6 +18,9 @@ export const ImportsFormDataStore = writable({
    avg_cost_per_hour: '',
    current_system: '',
 });
+
+
+
 
 
 // export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstname.trim());

@@ -1,9 +1,10 @@
 <script>
 	import { validateImports } from './../schema.js';
-	import { ImportsFormDataStore, AllFormsSumittedStore } from './../store.js';
+	import { ImportsFormDataStore, DetailsFormDataStore, AllFormsSumittedStore } from './../store.js';
   import { ShowModalStore } from "../store";
   import ExclamationIcon from "./ExclamationIcon.svelte";
   import ImportsModal from "./ImportsModal.svelte";
+  import { sendHubSpotData } from '../hubspot.js';
   
   let import_entries_per_year;
   let avg_num_po_changes;
@@ -14,7 +15,7 @@
   let formErrors;
 
   $:{
-    console.log($ImportsFormDataStore);
+    // console.log($ImportsFormDataStore);
   }
 
   const handleSubmit = (e) => {
@@ -24,6 +25,7 @@
     if (results.valid) {
       window.scrollTo(0, 150) 
     AllFormsSumittedStore.update(curr => curr = true)
+    sendHubSpotData()
     }
     if (!results.valid) {
       formErrors = results?.data?.fieldErrors;
