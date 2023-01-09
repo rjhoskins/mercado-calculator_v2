@@ -9,19 +9,14 @@ const hiddenData = {
 }
 
 
-async function sendHubSpotData() {
+async function sendHubSpotData(isTest) {
   const detailsData = get(DetailsFormDataStore)
-  console.log('detailsData', detailsData);
   const importsData = get(ImportsFormDataStore)
-  console.log('ImportsFormDataStore', ImportsFormDataStore);
-  // console.log({ ...detailsData, ...ImportsFormDataStore, ...hiddenData })
-  console.log('hiddenData', hiddenData);
+  const bigBoi = { ...detailsData, ...importsData, ...hiddenData }
+  // console.log('big boi', { ...detailsData, ...importsData, ...hiddenData })
 
-  // const data = await generateHubSpotAPIData()
-  if (isTest) {
-    // console.log('data being "sent" to API...😉', data);
-    return
-  }
+  const data = await generateHubSpotAPIData(bigBoi)
+  console.log('data being "sent" to API...😉', data);
 
 
   // let email = data[2].value;
@@ -47,13 +42,12 @@ async function sendHubSpotData() {
 
 
 //legacy API formatting 
-const generateHubSpotAPIData = async () => {
+const generateHubSpotAPIData = async (data) => {
   try {
 
     return new Promise(async function (resolve, reject) {
-      const formData = await getFormData();
-      const hubSpotData = Object.keys(formData).map(prop => ({ property: prop, value: formData[prop] }));
-      _hubSpotAPIData = hubSpotData;
+
+      const hubSpotData = Object.keys(data).map(prop => ({ property: prop, value: data[prop] }));
       resolve(hubSpotData)
     })
 

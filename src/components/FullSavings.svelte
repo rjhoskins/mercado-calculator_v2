@@ -9,6 +9,7 @@
 
     <div class="relative z-10 grid w-full max-w-mercado-max gap-4 p-4 mx-auto min-h-[312px] rounded-2xl sm:p-4 md:p-x-6 lg:p-12  md:grid-cols-2 space-y-6 leading-7 mt-6 md:!rounded-br-[150px] bg-darkBlue ">
         <div class="absolute w-[300px] h-[300px] bottom-0 right-0 hidden circles md:block">
+            <img class="absolute w-[211px] bottom-0 -left-[20%] -z-[1]  h-auto aspect-auto" src="https://mercadolabs.com/wp-content/uploads/2023/01/Mercado-ROI-Man-01.png" alt="mercado roi man" srcset="">
             <div class="absolute right-0 w-[150px] h-[150px] rotate-180 rounded-[0_0_150px_0] -z-10 bg-darkPink top-0 circle"></div>
             <div class="absolute left-0 w-[150px] h-[150px] rotate-180 rounded-[0_150px_0_0]  -z-10 bg-lightPink bottom-0 circle"></div>
             <div class="absolute right-0 w-[150px] h-[150px] rotate-180 rounded-[150px_0_0_0] drop-shadow-[1px_1px_0_rgb(255,207,239)] -z-10 bg-medPink bottom-0 circle"></div>

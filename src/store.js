@@ -19,12 +19,8 @@ export const ImportsFormDataStore = writable({
    current_system: '',
 });
 
-
-
-
-
-// export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstname.trim());
-export const resultsFirstName = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.import_entries_per_year);
+export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstname.trim());
+// export const resultsFirstName = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.import_entries_per_year);
 export const numberOfImportPos = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.import_entries_per_year);
 export const avgNumPOChanges = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.avg_num_po_changes);
 export const resultsTotalSavings = derived(ImportsFormDataStore, $ImportsFormDataStore => ` $${new Intl.NumberFormat('en-US', {}).format((25 * $ImportsFormDataStore.import_entries_per_year) + (25 * $ImportsFormDataStore.import_entries_per_year * $ImportsFormDataStore.avg_num_po_changes))}`);

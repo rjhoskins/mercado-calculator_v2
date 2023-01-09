@@ -11,7 +11,7 @@
 	}
 </style>
 <Tailwindcss />
-<main class="flex flex-col items-center justify-center min-h-screen mx-auto font align-center">
+<main class="flex-col items-center justify-center min-h-screen mx-auto md:flex font align-center">
 	
 
 	<RoiCalculator />

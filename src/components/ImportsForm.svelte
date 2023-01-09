@@ -23,7 +23,7 @@
     const formData = {import_entries_per_year,avg_num_po_changes,avg_cost_per_hour, current_system}
     const results = validateImports(formData)
     if (results.valid) {
-      window.scrollTo(0, 150) 
+      window.scrollTo(0, 0) 
     AllFormsSumittedStore.update(curr => curr = true)
     sendHubSpotData()
     }

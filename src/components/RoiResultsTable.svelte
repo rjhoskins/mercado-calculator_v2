@@ -203,21 +203,21 @@
             </tr>
             <tr class="border border-t border-t-b9b9">
               <td
-                class="px-6 py-2 pt-4 text-sm font-medium whitespace-nowrap"
+                class="px-6 pt-4 pb-6 text-sm font-bold whitespace-nowrap"
                 >Annual Savings</td
               >
               <td
-                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 pt-4 pb-6 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {randomblur(totalNums)}
               </td>
               <td
-                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 pt-4 pb-6 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {randomblur(totalNums)}
               </td>
               <td
-                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 pt-4 pb-6 text-sm font-light whitespace-nowrap blur-sm"
               >
                 {randomblur(totalNums)}
               </td>

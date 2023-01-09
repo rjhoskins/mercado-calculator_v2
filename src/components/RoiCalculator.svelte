@@ -2,9 +2,8 @@
   import { DetailsCompletedStore, AllFormsSumittedStore } from '../store';
   import { scale } from 'svelte/transition';
   import AddValue from './AddValue.svelte'
-  import DummyHeader from './DummyHeader.svelte'
-  import DummyFooter from './DummyFooter.svelte'
-  import RoiResultsCalculator from './RoiResultsTable.svelte';
+  // import DummyHeader from './DummyHeader.svelte'
+  // import DummyFooter from './DummyFooter.svelte'
   import CircleCheckIcon from './CircleCheckIcon.svelte';
   import DetailsForm from './DetailsForm.svelte';
   import ImportsForm from './ImportsForm.svelte';
@@ -15,9 +14,6 @@
   import Tabs from './Tabs.svelte';
   import FullSavings from './FullSavings.svelte';
 
-  let blurString;
-  let numberOfImportPos;
-  let avgNumPOChanges;
 
 
 
@@ -26,7 +22,7 @@
 
 </script>
 
-<DummyHeader />
+<!-- <DummyHeader /> -->
 {#if !$AllFormsSumittedStore}
 
 <AddValue />
@@ -116,17 +112,4 @@
 {/if}
 
 
-<DummyFooter />
-<style>
-  .logo {
-    will-change: filter;
-  }
-
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ffd500aa);
-  }
-</style>
+<!-- <DummyFooter /> -->
