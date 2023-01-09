@@ -24,7 +24,7 @@
             <p class="text-left text-white">Realize additional savings on air and ocean freight customs clearance fees, and carrying cost with a dedicated 1:1 ROI demo from our dedicated team.</p>
             <a href="/roi-demo" 
 
-            class="lg:inline-flex lg:justify-center lg:mx-0 mx-auto w-fit h-fit !my-6 px-4 py-3 !mt-8 !mb-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  "
+            class="transition lg:inline-flex lg:justify-center lg:mx-0 mx-auto w-fit h-fit !my-6 px-4 py-3 !mt-8 !mb-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  "
             >BOOK YOUR ROI DEMO</a>
             
     </div>

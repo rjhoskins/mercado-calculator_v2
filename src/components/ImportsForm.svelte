@@ -138,5 +138,5 @@
      {/if}
     </div>
   </div>
-  <button type="submit" class="block w-full px-4 py-3 !my-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  ">Submit</button>
+  <button type="submit" class="transition block w-full px-4 py-3 !my-6 text-sm font-bold text-black border-2 hover:border-2 hover:border-yellowz border-yellowz hover:bg-transparent hover:text-white rounded-full hover bg-yellowz  ">Submit</button>
 </form>
