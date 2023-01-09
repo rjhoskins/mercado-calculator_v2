@@ -6,7 +6,7 @@
 - [x] fix funky tab width for certain screen sizes.
 - [x] implement data store
 - [x] wire things up
-- [] add data validation
+- [] add data validation (<https://stackoverflow.com/questions/123559/how-to-validate-phone-numbers-using-regex>)
 - [] add api call (<https://legacydocs.hubspot.com/docs/methods/contacts/create_or_update> && <https://developers.hubspot.com/changelog/upcoming-api-key-sunset>)
 - [x] create HubSpot contact properties (if not exist)
 - [] deploy to WP

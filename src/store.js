@@ -4,28 +4,27 @@ export const ShowModalStore = writable(false);
 export const DetailsCompletedStore = writable(false);
 export const AllFormsSumittedStore = writable(false);
 export const DetailsFormDataStore = writable({
-   industry: '',
-   firstName: '',
-   lastName: '',
+   mxp_vertical_industry: '',
+   firstname: '',
+   lastname: '',
    phone: '',
-   companyName: '',
-   companyEmailAddress: '',
+   company: '',
+   email: '',
 });
 
 export const ImportsFormDataStore = writable({
-   numberOfImportPos: '',
-   avgNumPOChanges: '',
-   avgCostPerHour: '',
-   systems: '',
+   import_entries_per_year: '',
+   avg_num_po_changes: '',
+   avg_cost_per_hour: '',
+   current_system: '',
 });
 
-export const blurString = '$375,000';
-export const randomDigitMoneyString = (length) => ` $${new Intl.NumberFormat('en-US', {}).format(string)}`
 
-export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstName.trim());
-export const numberOfImportPos = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.numberOfImportPos);
-export const avgNumPOChanges = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.avgNumPOChanges);
-export const resultsTotalSavings = derived(ImportsFormDataStore, $ImportsFormDataStore => ` $${new Intl.NumberFormat('en-US', {}).format((25 * $ImportsFormDataStore.numberOfImportPos) + (25 * $ImportsFormDataStore.numberOfImportPos * $ImportsFormDataStore.avgNumPOChanges))}`);
+// export const resultsFirstName = derived(DetailsFormDataStore, $DetailsFormDataStore => $DetailsFormDataStore.firstname.trim());
+export const resultsFirstName = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.import_entries_per_year);
+export const numberOfImportPos = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.import_entries_per_year);
+export const avgNumPOChanges = derived(ImportsFormDataStore, $ImportsFormDataStore => $ImportsFormDataStore.avg_num_po_changes);
+export const resultsTotalSavings = derived(ImportsFormDataStore, $ImportsFormDataStore => ` $${new Intl.NumberFormat('en-US', {}).format((25 * $ImportsFormDataStore.import_entries_per_year) + (25 * $ImportsFormDataStore.import_entries_per_year * $ImportsFormDataStore.avg_num_po_changes))}`);
 
 
 

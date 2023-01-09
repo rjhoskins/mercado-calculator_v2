@@ -110,8 +110,8 @@
 
 <div  transition:scale  class="">
   <ResultsValue />
-    <RoiResultsTable />
-    <FullSavings />
+  <RoiResultsTable />
+  <FullSavings />
 </div>
 {/if}
 

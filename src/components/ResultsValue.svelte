@@ -1,5 +1,5 @@
 <script>
-		import { blurString, resultsFirstName, resultsTotalSavings  } from './../store.js';   
+		import { resultsFirstName, resultsTotalSavings  } from './../store.js';   
     import Confetti from './Confetti.svelte';   
     import Button from './Button.svelte';
     import NemberedCircleIcon from './NemberedCircle Icon.svelte';

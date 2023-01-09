@@ -1,7 +1,10 @@
 <script>
-	import { blurString, resultsFirstName, numberOfImportPos, avgNumPOChanges   } from './../store.js';
+	import {numberOfImportPos, avgNumPOChanges   } from './../store.js';
 
-  // $: {console.table(blurString,$resultsFirstName, $numberOfImportPos, $avgNumPOChanges );}
+  const blurNums = ['$165,465','$247,524','$378,654','$456,987','$512,365','$675,398']
+  const totalNums = ['$1,165,4650','$2,475,240','$3,078654','$4,560,987','$5,102,365']
+
+  const randomblur = (arr) => arr[Math.floor(Math.random() * arr.length)] 
 
   const showAsCurrency = (string) => {
     return ` $${new Intl.NumberFormat('en-US', {}).format(string)}`
@@ -96,17 +99,17 @@
                 colspan="1"
                 class="px-6 py-2 text-sm font-light text-center whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-              {blurString}
+              {randomblur(blurNums)}
               </td>
             </tr>
             <tr class="">
@@ -118,18 +121,18 @@
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
 
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
             </tr>
             <tr class="">
@@ -141,17 +144,17 @@
                 colspan="1"
                 class="px-6 py-2 text-sm font-light text-center whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
             </tr>
             <tr class="">
@@ -162,17 +165,17 @@
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
             </tr>
 
@@ -185,38 +188,38 @@
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
               <td
                 class="px-6 py-2 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(blurNums)}
               </td>
             </tr>
-            <tr class="border border-b border-b-b9b9">
+            <tr class="border border-t border-t-b9b9">
               <td
-                class="px-6 py-2 pb-4 text-sm font-medium whitespace-nowrap"
+                class="px-6 py-2 pt-4 text-sm font-medium whitespace-nowrap"
                 >Annual Savings</td
               >
               <td
-                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(totalNums)}
               </td>
               <td
-                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(totalNums)}
               </td>
               <td
-                class="px-6 py-2 pb-4 text-sm font-light whitespace-nowrap blur-sm"
+                class="px-6 py-2 pt-4 text-sm font-light whitespace-nowrap blur-sm"
               >
-                {blurString}
+                {randomblur(totalNums)}
               </td>
             </tr>
           </tbody>

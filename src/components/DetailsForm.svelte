@@ -9,72 +9,98 @@
   import IndustrySelect from './IndustrySelect.svelte';
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
-  let industry;
-  let firstName;
-  let lastName;
+  let mxp_vertical_industry;
+  let firstname;
+  let lastname;
   let phone;
-  let companyName;
-  let companyEmailAddress;
+  let company;
+  let email;
+  let formErrors;
 
   $: {
-    console.log($DetailsFormDataStore);
-    console.log($DetailsCompletedStore);
-    console.log($AllFormsSumittedStore);
+    // console.log($DetailsFormDataStore);
+    // console.log($DetailsCompletedStore);
+    // console.log($AllFormsSumittedStore);
   }
 
   const handleSubmit = (e) => {
+    formErrors = [];
+    const currFormData = {
+      mxp_vertical_industry,
+      firstname,
+      lastname,
+      phone,
+      company,
+      email,
+    };
+    const results = validateDetails(currFormData);
+    if (results.valid) {
+      DetailsCompletedStore.update((curr) => (curr = true));
+    }
+    if (!results.valid) {
+      formErrors = results?.data?.fieldErrors;
+      console.log('not valid', formErrors);
+    }
+    if (!results.valid) formErrors = results?.data?.fieldErrors;
     DetailsFormDataStore.update(
       (curr) =>
         (curr = {
-          industry,
-          firstName,
-          lastName,
+          mxp_vertical_industry,
+          firstname,
+          lastname,
           phone,
-          companyName,
-          companyEmailAddress,
+          company,
+          email,
         })
     );
-    DetailsCompletedStore.update((curr) => (curr = true));
   };
 
-  const handleIndustryChange = (e) => (industry = e.detail);
+  const handleIndustryChange = (e) => (mxp_vertical_industry = e.detail);
 </script>
 
 <form on:submit|preventDefault={handleSubmit} class="space-y-8">
   <div class="space-y-8 ">
     <div class="grid-cols-1 sm:grid gap-y-6 gap-x-4 sm:grid-cols-6">
       <div class="sm:col-span-3">
-        <label for="firstName" class="block text-sm font-medium text-white"
+        <label for="firstname" class="block text-sm font-medium text-white"
           >First name</label
         >
         <div class="mt-1">
           <input
             type="text"
-            bind:value={firstName}
+            bind:value={firstname}
             placeholder="Chris"
-            name="firstName"
-            id="firstName"
+            name="firstname"
+            id="firstname"
             autocomplete="given-name"
             class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           />
         </div>
+        {#if formErrors?.firstname}
+           <!-- content here -->
+           <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.firstname[0]}</p>
+        {/if}
       </div>
 
       <div class="sm:col-span-3">
-        <label for="lastName" class="block text-sm font-medium text-white"
+        <label for="lastname" class="block text-sm font-medium text-white"
           >Last name</label
         >
         <div class="mt-1">
           <input
             type="text"
-            bind:value={lastName}
+            bind:value={lastname}
             placeholder="Smith"
-            name="lastName"
-            id="lastName"
+            name="lastname"
+            id="lastname"
             autocomplete="family-name"
             class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           />
         </div>
+        {#if formErrors?.lastname}
+        <!-- content here -->
+        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.lastname[0]}</p>
+     {/if}
       </div>
 
       <div class="sm:col-span-3">
@@ -92,43 +118,53 @@
             class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           />
         </div>
+        {#if formErrors?.phone}
+        <!-- content here -->
+        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.phone[0]}</p>
+     {/if}
       </div>
 
-      <IndustrySelect on:industryChange={handleIndustryChange} />
+      <IndustrySelect formError={formErrors?.mxp_vertical_industry} on:industryChange={handleIndustryChange} />
 
       <div class="col-span-6">
-        <label for="companyName" class="block text-sm font-medium text-white"
+        <label for="company" class="block text-sm font-medium text-white"
           >Company name</label
         >
         <div class="mt-1">
           <input
             type="text"
-            bind:value={companyName}
+            bind:value={company}
             placeholder="ABC Suppliers"
-            name="companyName"
-            id="companyName"
-            autocomplete="companyName"
+            name="company"
+            id="company"
+            autocomplete="company"
             class="block w-full px-6 pl-0 text-sm bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz"
           />
         </div>
+        {#if formErrors?.company}
+        <!-- content here -->
+        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.company[0]}</p>
+     {/if}
       </div>
 
       <div class="col-span-6">
-        <label
-          for="companyEmailAddress"
-          class="block text-sm font-medium text-white"
+        <label for="email" class="block text-sm font-medium text-white"
           >Company email address</label
         >
         <div class="mt-1">
           <input
             type="text"
-            bind:value={companyEmailAddress}
+            bind:value={email}
             placeholder="email@abcsuppliers.com"
-            name="companyEmailAddress"
-            id="companyEmailAddress"
-            autocomplete="companyEmailAddress"
+            name="email"
+            id="email"
+            autocomplete="email"
             class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           />
+          {#if formErrors?.email}
+          <!-- content here -->
+          <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.email[0]}</p>
+       {/if}
         </div>
       </div>
     </div>

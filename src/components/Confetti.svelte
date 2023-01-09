@@ -14,8 +14,8 @@
          height="{600}"
          width="{600}"
          controls="{false}"
-  background="transparent"
-  controlsLayout={controlsLayout}
+        background="transparent"
+        controlsLayout={controlsLayout}
 
        />
      </div>
