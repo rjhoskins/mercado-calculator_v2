@@ -61,7 +61,7 @@
       </div>
       <div class="relative ">
         <input type=number name="import_entries_per_year" id="import_entries_per_year"
-          class="w-full bg-transparent border-transparent no-spinner inputz placeholder-darkTextGrayish text-darkTextGrayish "
+        class="block w-full px-6 pl-0 bg-transparent border-transparent no-spinner border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           aria-invalid="true" placeholder="Example: 1500" bind:value={import_entries_per_year} />
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <!-- TODO:? Heroicon name: mini/exclamation-circle -->
@@ -81,7 +81,7 @@
       </div>
       <div class="relative ">
         <input type=number name="avg_num_po_changes" id="avg_num_po_changes"
-          class="w-full bg-transparent border-transparent no-spinner inputz placeholder-darkTextGrayish text-darkTextGrayish sm:text-sm"
+        class="block w-full px-6 pl-0 bg-transparent border-transparent no-spinner border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           aria-invalid="true" placeholder="Example: 5" bind:value={avg_num_po_changes} />
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <!-- TODO:? Heroicon name: mini/exclamation-circle -->
@@ -102,7 +102,7 @@
       </div>
       <div class="relative ">
         <input type="number" name="avg_cost_per_hour" id="avg_cost_per_hour"
-          class="w-full bg-transparent border-transparent no-spinner inputz placeholder-darkTextGrayish text-darkTextGrayish sm:text-sm"
+        class="block w-full px-6 pl-0 bg-transparent border-transparent no-spinner border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           aria-invalid="true" placeholder="Example: 50" bind:value={avg_cost_per_hour} />
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <!-- TODO:? Heroicon name: mini/exclamation-circle -->
@@ -116,14 +116,14 @@
     
     <div class="avg--imports-input">
       <div class="flex justify-between">
-        <label class="text-white labelz" for="current_system">current_system you use to send POs and collaborate with your suppliers</label>
+        <label class="text-white labelz" for="current_system">Systems you use to send POs and collaborate with your suppliers</label>
         <div class="hover:cursor-pointer" on:click|preventDefault={(e) => handleToolTipClick('SYSTEM')}>
           <ExclamationIcon />
         </div>
       </div>
       <div class="relative ">
         <input type="text" name="current_system" id="current_system"
-          class="w-full placeholder-gray-400 bg-transparent border-transparent inputz placeholder-darkTextGrayish text-darkTextGrayish sm:text-sm"
+        class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
           aria-invalid="true" placeholder="Examples: ERP Name, Spreadsheets, Email" bind:value={current_system} />
         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
           <!-- TODO:? Heroicon name: mini/exclamation-circle -->

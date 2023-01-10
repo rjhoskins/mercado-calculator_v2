@@ -9,6 +9,7 @@ export const DetailsFormDataStore = writable({
    lastname: '',
    phone: '',
    company: '',
+   jobtitle: '',
    email: '',
 });
 

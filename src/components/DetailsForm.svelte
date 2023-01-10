@@ -14,11 +14,12 @@
   let lastname;
   let phone;
   let company;
+  let jobtitle;
   let email;
   let formErrors;
 
   $: {
-    // console.log($DetailsFormDataStore);
+    console.log($DetailsFormDataStore);
     // console.log($DetailsCompletedStore);
     // console.log($AllFormsSumittedStore);
   }
@@ -31,6 +32,7 @@
       lastname,
       phone,
       company,
+      jobtitle,
       email,
     };
     const results = validateDetails(currFormData);
@@ -50,6 +52,7 @@
           lastname,
           phone,
           company,
+          jobtitle,
           email,
         })
     );
@@ -78,7 +81,7 @@
         </div>
         {#if formErrors?.firstname}
            <!-- content here -->
-           <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.firstname[0]}</p>
+           <p class="mt-2 text-xs text-red-600" id="">{formErrors.firstname[0]}</p>
         {/if}
       </div>
 
@@ -99,7 +102,7 @@
         </div>
         {#if formErrors?.lastname}
         <!-- content here -->
-        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.lastname[0]}</p>
+        <p class="mt-2 text-xs text-red-600" id="">{formErrors.lastname[0]}</p>
      {/if}
       </div>
 
@@ -120,13 +123,13 @@
         </div>
         {#if formErrors?.phone}
         <!-- content here -->
-        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.phone[0]}</p>
+        <p class="mt-2 text-xs text-red-600" id="">{formErrors.phone[0]}</p>
      {/if}
       </div>
 
       <IndustrySelect formError={formErrors?.mxp_vertical_industry} on:industryChange={handleIndustryChange} />
 
-      <div class="col-span-6">
+      <div class="sm:col-span-3">
         <label for="company" class="block text-sm font-medium text-white"
           >Company name</label
         >
@@ -143,8 +146,30 @@
         </div>
         {#if formErrors?.company}
         <!-- content here -->
-        <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.company[0]}</p>
+        <p class="mt-2 text-xs text-red-600" id="">{formErrors.company[0]}</p>
      {/if}
+      </div>
+
+
+      <div class="sm:col-span-3">
+        <label for="jobtitle" class="block text-sm font-medium text-white"
+          >Job title</label
+        >
+        <div class="mt-1">
+          <input
+            type="text"
+            bind:value={jobtitle}
+            placeholder="Head of Supply Chain"
+            name="jobtitle"
+            id="jobtitle"
+            autocomplete="jobtitle"
+            class="block w-full px-6 pl-0 bg-transparent border-transparent border-b-darkTextGrayish placeholder-darkTextGrayish text-darkTextGrayish focus:border-yellowz focus:ring-yellowz sm:text-sm"
+          />
+        </div>
+        {#if formErrors?.jobtitle}
+           <!-- content here -->
+           <p class="mt-2 text-xs text-red-600" id="">{formErrors.jobtitle[0]}</p>
+        {/if}
       </div>
 
       <div class="col-span-6">
@@ -163,7 +188,7 @@
           />
           {#if formErrors?.email}
           <!-- content here -->
-          <p class="mt-2 text-xs text-red-600" id="email-error">{formErrors.email[0]}</p>
+          <p class="mt-2 text-xs text-red-600" id="">{formErrors.email[0]}</p>
        {/if}
         </div>
       </div>

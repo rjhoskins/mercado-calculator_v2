@@ -7,7 +7,8 @@ const detailsSchema = z.object({
    firstname: z.string().min(2, { message: "Must be 2 or more characters long" }),
    lastname: z.string().min(2, { message: "Must be 2 or more characters long" }),
    phone: z.string().regex(phoneRegEx, { message: "Invalide phone" }),
-   company: z.string(2, { message: "Must be 2 or more characters long" }),
+   company: z.string().min(2, { message: "Must be 2 or more characters long" }),
+   jobtitle: z.string().min(2, { message: "Must be 2 or more characters long" }),
    email: z.string().email({ message: "Invalid email address" })
 })
 const importsSchema = z.object({
