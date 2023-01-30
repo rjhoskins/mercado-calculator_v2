@@ -4,7 +4,7 @@ import { DetailsFormDataStore, ImportsFormDataStore } from './store'
 const hiddenData = {
   source: "ROI Calculator",
   lifecyclestage: "salesqualifiedlead",
-  hs_lead_status: "NEW",
+  hs_lead_status: "New SQL",
   type: "Prospects",
 }
 
@@ -13,14 +13,7 @@ async function sendHubSpotData(isTest) {
   const detailsData = get(DetailsFormDataStore)
   const importsData = get(ImportsFormDataStore)
   const bigBoi = { ...detailsData, ...importsData, ...hiddenData }
-  // console.log('big boi', { ...detailsData, ...importsData, ...hiddenData })
-  const data = await generateHubSpotAPIData(bigBoi)
-  console.log('data being "sent" to API...😉', data);
 
-
-  let email = detailsData.email
-  console.log('email...', email);
-  console.log('bigBoi...', bigBoi);
   fetch('https://mercadolabs.com/wp-json/hubspot/v1/contacts', {
     method: 'POST',
     headers: {
@@ -33,7 +26,7 @@ async function sendHubSpotData(isTest) {
     )
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    // .then(data => console.log(data))
     .catch(err => console.log(err))
 
 

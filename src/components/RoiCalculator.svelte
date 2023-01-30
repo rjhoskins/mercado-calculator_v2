@@ -83,7 +83,7 @@
     </div>
     <div class="w-full mx-auto mt-8 form-stuffz right">
       <Tabs />
-      <div class="relative p-3 overflow-auto md:max-w-lg formz grid-rows-auto left bg-darkBlue rounded-b-2xl {$DetailsCompletedStore
+      <div class="relative p-3 overflow-auto formz grid-rows-auto left bg-darkBlue rounded-b-2xl {$DetailsCompletedStore
           ? ' rounded-tl-2xl '
           : ' rounded-tr-2xl '}">
         {#if $DetailsCompletedStore }

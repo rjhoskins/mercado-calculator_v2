@@ -24,12 +24,12 @@ export const validateDetails = (detailsFormData) => {
 
    try {
       const result = detailsSchema.parse(detailsFormData)
-      console.log('SUCCESS')
+      // console.log('SUCCESS')
       return { valid: true, data: result }
 
 
    } catch (err) {
-      console.log('ERROR')
+      // console.log('ERROR')
       return { valid: false, data: err.flatten() }
    }
 }

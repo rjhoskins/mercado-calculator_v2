@@ -19,7 +19,7 @@
   let formErrors;
 
   $: {
-    console.log($DetailsFormDataStore);
+    // console.log($DetailsFormDataStore);
     // console.log($DetailsCompletedStore);
     // console.log($AllFormsSumittedStore);
   }
